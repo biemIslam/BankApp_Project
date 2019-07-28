@@ -6,9 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bank App</title>
         <link href="assets/css/style.css" rel="stylesheet">
-        <!-- <script src="assets/js/custom.js"></script> -->
+        <!-- <script src="custom.js"></script> -->
     </head>
-    <body onload="headerContent()">
+    <body>
+        
         <div class="container">
             <header id="menu-bar">
                 <div id="bank-app"><a href="index.html">Bank App</a></div>
@@ -17,7 +18,7 @@
                         <li> <a href="/">Home</a></li>
                         <li> <a href="#">About</a></li>
                         <li> <a href="#">Our team</a></li>
-                        <li> <a href="#" id="signin">Sign in</a></li>
+                        <li> <button class="btn-signin" id="btnLogin" onclick="">  Sign in </button> </li>
                         <li> <a href="#">Create Bank account</a></li>
                     </ul>
                 </nav>
@@ -58,11 +59,25 @@
                             <input type="radio" name="person" id="" value="user">User
                         </div>
                     </div>
-                    <button class="btn-signin" id="btnLogin"> <a href="#"> Sign in</a></button> 
-                    <span> No account yet?<a href="#"> Sign up</a></span>
+                    <button class="btn-submit" id="btnSub"> <a href="#"> Submit</a></button> 
+                    <span> No account yet?<a href="#"> Register</a></span>
                     <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
                 </form>
             </div>
         </div>
     </body>
+    <script>
+        let modal = document.getElementById('modal-login');
+        let close = document.getElementById('close');
+
+        document.getElementById('btnLogin').onclick = function () {
+            modal.style.display = "block"
+        }
+    
+        close.onclick = function(){
+            modal.style.display = "none";
+        };
+
+ 
+    </script>
 </html>
