@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
-        <!-- <link href="assets/head/header.html" rel="import"> -->
-            <script src="assets/js/jquery-3.3.1.min.js"></script>
-        <!-- <script>
-            $(function(){
-                $('head').load('assets/head/header.html');
-            });
-        </script> -->
-         <script>
-            $(document).ready(function(){
-                $('#header').load('assets/head.html');
-                // $('#footer').load('assets/head/footer.html');
-            });
-        </script>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bank App</title>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <!-- <script src="assets/js/custom.js"></script> -->
     </head>
-    <body>
-       
-        <div id="header">hjkml;.</div>
-        <div id="footer"></div>
+    <body onload="headerContent()">
+        <div class="container">
+            <header id="menu-bar">
+                <div id="bank-app"><a href="index.html">Bank App</a></div>
+                <nav>
+                    <ul>
+                        <li> <a href="/">Home</a></li>
+                        <li> <a href="#">About</a></li>
+                        <li> <a href="#">Our team</a></li>
+                        <li> <a href="#" id="signin">Sign in</a></li>
+                        <li> <a href="#">Create Bank account</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div id="bg-img"> <img src="assets/images/image1.jpg"> </div>
+                <div>
+                    <p> <h2 id="welcome"> Welcome to our online Banking App </h2></p>
+                    <p id="note"> The Banking App is an Online banking application which renders all  
+                        banking operations such as account creation, customers deposits and withdrawals.
+                        Banking services just got better
+                    </p>
+                </div>
+            </main>
+            <footer id="footer">
+                <p> Developed by Maryam &copy; 2019.</p>
+            </footer>
+        </div>
+
+        <!-- login modal -->
+        <div id="modal-login" class="modal">
+            <div id="modal-content">
+                <span id="close"> &times;</span>
+                <form>
+                    <div class="input-groups">
+                        <label>Email:</label>
+                        <div class="input-fields"> <input type="text" name="" id="" placeholder="you@domain.com" class="text-field"> </div>
+                    </div>
+                    <div class="input-groups">
+                        <label>Password:</label>
+                        <div class="input-fields"> <input type="text" name="" id="" placeholder="enter password.." class="text-field"> </div>
+                    </div>
+                    <div class="input-groups">
+                        <label>login as:</label>
+                        <div class="input-fields"> 
+                            <input type="radio" name="person" id="" value="admin" checked>Admin
+                            <input type="radio" name="person" id="" value="staff">Staff
+                            <input type="radio" name="person" id="" value="user">User
+                        </div>
+                    </div>
+                    <button class="btn-signin" id="btnLogin"> <a href="#"> Sign in</a></button> 
+                    <span> No account yet?<a href="#"> Sign up</a></span>
+                    <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
