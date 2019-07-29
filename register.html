@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bank App</title>
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-        <!-- <script src="custom.js"></script> -->
-    </head>
-    <body onload="headerContent()">
-        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank App</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
         <div class="container">
             <header id="menu-bar">
                 <div id="bank-app"><a href="index.html">Bank App</a></div>
@@ -24,25 +22,7 @@
                 </nav>
             </header>
             <main>
-                <div id="bg-img"> <img src="assets/images/image1.jpg"> </div>
-                <div>
-                    <p> <h2 id="welcome"> Welcome to our online Banking App </h2></p>
-                    <p id="note"> The Banking App is an Online banking application which renders all  
-                        banking operations such as account creation, customers deposits and withdrawals.
-                        Banking services just got better
-                    </p>
-                </div>
-            </main>
-            <footer id="footer">
-                <p> Developed by Maryam &copy; 2019.</p>
-            </footer>
-        </div>
-
-        <!-- login modal -->
-        <div id="modal-login" class="modal">
-            <div id="modal-content">
-                <span id="close"> &times;</span>
-                <form>
+                <form action="" method="">
                     <div class="input-groups">
                         <label>Email:</label>
                         <div class="input-fields"> <input type="text" name="" id="" placeholder="you@domain.com" class="text-field"> </div>
@@ -63,23 +43,7 @@
                     <span> No account yet?<a href="register.html"> Register</a></span>
                     <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
                 </form>
-            </div>
+            </main>
         </div>
-    </body>
-    <script>
-        let modal = document.getElementById('modal-login');
-        let close = document.getElementById('close');
-
-        document.getElementById('btnLogin').onclick = function () {
-            modal.style.display = "block"
-        }
-    
-        close.onclick = function(){
-            modal.style.display = "none";
-        };
-
-        // function headerContent(){
-        //  document.getElementById('menu-bar').innerHTML = "<object type='text/html' data='assets/head/header.html'></object>"
-        // }
-    </script>
+</body>
 </html>
