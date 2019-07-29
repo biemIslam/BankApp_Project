@@ -1,0 +1,184 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: -8px -8px 0px;
+    
+    /* border: 1px solid red; */
+}
+header{
+    display: flex;
+    background: rgb(78, 77, 77);
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+}
+header div{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 30px;
+    /* border: 1px solid red; */
+}
+header div a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+header nav ul{
+    display: flex;
+    list-style-type: none;
+}
+li button {
+   
+    background: rgb(226, 220, 220);
+    border: 1px solid rgb(226, 220, 220);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: -5px;
+    color: black;
+    font-size: 19px
+}
+
+ul li a{
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+li a:hover{
+    color: rgb(159, 79, 235);
+}
+li button:hover, li button:focus{
+    border: rgb(159, 79, 235);
+}
+
+#bg-img img{
+    /* border-radius: 10px; */
+    margin-top: 50px;
+    width: 100%;
+    height: 450px;
+}
+h2#welcome{
+    text-align: center;
+    padding-top: 30px
+}
+
+#note{
+    padding: 30px;
+    line-height: 25px
+}
+
+footer{
+    background: rgb(78, 77, 77);
+    height: 70px;
+    text-align: center;
+    color: white;
+    margin-bottom: -10px;
+    padding-top: 20px;
+}
+label{
+    /* border: 1px solid red; */
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.input-groups{
+    display: flex;
+    padding-top: 30px;
+
+}
+input.text-field{
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+input[type="radio"]{
+    margin-left: 50px;
+}
+input[type="file"]{
+    /* margin-bottom: 20px; */
+    width: 100%;
+    font-size: 28px;
+    margin-left: 50px;
+}
+.btn-submit, .btn-signup{
+    background: rgb(67, 233, 117);
+    border: 1px solid rgb(67, 233, 117);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 30px;
+    font-size: 20px
+}
+button a{
+    text-decoration: none;
+    color: black
+}
+span a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(50, 6, 92);
+}
+span a:hover{
+    color: black;
+}
+#forgot-password{
+    margin-left: 130px;
+    margin-top: -30px;
+}
+
+.modal{
+    /* border: 1px solid red; */
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    z-index: 1;
+   
+    
+}
+#modal-content{
+    background: rgb(219, 215, 215);
+    margin: auto;
+    padding: 0 0 20px 20px;
+    width: 40%;
+    border-radius: 30px;
+    position: relative;
+    -webkit-animation-name: topanimation;
+    -webkit-animation-duration: 0.4s;
+    animation-name: topanimation;
+    animation-duration: 0.8s
+   
+}
+
+@-webkit-keyframes topanimation {
+    from {top:-100px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes topanimation {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+  }
+#close{
+    float: right;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: red;
+    padding: 5px;
+    height: 27px;
+    border-top-right-radius: 30px
+}
+
+span#close:hover{
+    cursor: default;
+    
+}
