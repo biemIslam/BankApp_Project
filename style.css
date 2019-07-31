@@ -101,17 +101,23 @@ input.text-field{
 input[type="radio"]{
     margin-left: 50px;
 }
-
-.btn-submit{
-    background: rgb(78, 77, 77);
-    border: 1px solid rgb(78, 77, 77);
+input[type="file"]{
+    /* margin-bottom: 20px; */
+    width: 100%;
+    font-size: 28px;
+    margin-left: 50px;
+}
+.btn-submit, .btn-signup{
+    background: rgb(67, 233, 117);
+    border: 1px solid rgb(67, 233, 117);
     padding: 10px;
     border-radius: 5px;
-    margin: 30px
+    margin: 30px;
+    font-size: 20px
 }
 button a{
     text-decoration: none;
-    color: white
+    color: black
 }
 span a{
     text-decoration: none;
