@@ -11,6 +11,8 @@
             form#signup-form{
                 margin: 100px auto;
                 width: 50%;
+                border-radius: 10px; 
+                border: 1px solid rgb(78, 77, 77);
             }
         </style>
     </head>
@@ -29,37 +31,137 @@
                 </nav>
             </header>
             <main>
-                <form id="signup-form" style="border-radius: 10px; border: 1px solid rgb(78, 77, 77)">
+                <form id="signup-form">
                     <div style="background: rgb(78, 77, 77);color: white;border-radius: 10px; border: 1px solid rgb(78, 77, 77)">
                         <h2 style="font-weight: 600;display: inline-block"> Bank Account Form</h2>
                         <span style="font-size: 20px">(Account Opening Form-Individual)</span>
                     </div>
                     <div  id="form-content" style="padding-left:30px;">
                         <div class="input-groups">
+                            <label>Branch:</label>
+                            <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter your branch" class="text-field"> </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Account no (for official use only):</label>
+                            <div class="input-fields"> <input type="text" name="" id="" placeholder="" class="text-field"> </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Title:</label>
+                            <div class="input-fields"> 
+                                <select name="select">
+                                    <option name="opt1" value="...">Choose..</option>
+                                    <option name="opt2" value="mr">Mr</option>
+                                    <option name="opt3" value="mrs">Mrs</option>
+                                    <option name="opt4" value="miss">Miss</option>
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
                             <label>Firstname:</label>
                             <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter firstname" class="text-field"> </div>
                         </div>
+                        <div class="input-groups">
+                                <label>Middlename:</label>
+                                <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter middlename" class="text-field"> </div>
+                            </div>
                         <div class="input-groups">
                             <label>Lastname:</label>
                             <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter lastname" class="text-field"> </div>
                         </div>
                         <div class="input-groups">
+                            <label>Marital Status:</label>
+                            <div class="input-fields"> 
+                                <input type="checkbox" name="status1" id="" value="single">Single
+                                <input type="checkbox" name="status2" id="" value="married">Married
+                                <input type="checkbox" name="status3" id="" value="others">Others
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Gender:</label>
+                            <div class="input-fields"> 
+                                <input type="checkbox" name="gender1" id="" value="girl">Female
+                                <input type="checkbox" name="gender2" id="" value="boy">Male
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Date of Birth:</label>
+                            <div class="input-fields"> 
+                                <input type="date" name=""  id="">                    
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Nationality:</label>
+                            <div class="input-fields">
+                                <input list="countries-list" class="countryState">  
+                                <datalist id="countries-list">
+                                    <option name="opt1" value="Algeria">
+                                    <option name="opt2" value="Ghana">
+                                    <option name="opt3" value="Nigeria">
+                                    <option name="opt4" value="South-Africa">
+                                </datalist> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>State of Origin:</label>
+                            <div class="input-fields">
+                                <input list="state-list" class="countryState">  
+                                <datalist id="state-list">
+                                    <option name="opt1" value="Abia">
+                                    <option name="opt2" value="Lagos">
+                                    <option name="opt3" value="Oyo">
+                                    <option name="opt4" value="Kano">
+                                </datalist> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>LGA:</label>
+                            <div class="input-fields">
+                                <input list="lga-list" class="countryState">  
+                                <datalist id="lga-list">
+                                    <option name="opt1" value="Ibeju-lekki">
+                                    <option name="opt2" value="Alimosho">
+                                    <option name="opt3" value="Itesiwaju">
+                                    <option name="opt4" value="Ajeromi">
+                                </datalist> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Residential Address:</label>
+                            <div class="input-fields"> 
+                                <input type="text" name="" id="" placeholder="Enter address" class="text-field"> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
+                            <label>Phone nos:</label>
+                            <div class="input-fields"> 
+                                <input type="number" name="" id="" placeholder="Enter number" class="text-field"> 
+                            </div>
+                        </div>
+                        <div class="input-groups">
                             <label>Email:</label>
-                            <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter email" class="text-field"> </div>
+                            <div class="input-fields"> 
+                                <input type="text" name="" id="" placeholder="Enter email" class="text-field">
+                            </div>
                         </div>
                         <div class="input-groups">
-                            <label>Password:</label>
-                            <div class="input-fields"> <input type="text" name="" id="" placeholder="Enter password.." class="text-field"> </div>
+                            <label>Next of kin:</label>
+                            <div class="input-fields"> 
+                                <input type="text" name="" id="" placeholder="Enter name" class="text-field">
+                            </div>
                         </div>
                         <div class="input-groups">
-                            <label>Confirm Password:</label>
-                            <div class="input-fields"> <input type="text" name="" id="" placeholder="confirm" class="text-field"> </div>
+                            <label>Address:</label>
+                            <div class="input-fields"> 
+                                <input type="text" name="" id="" placeholder="Enter address" class="text-field">
+                            </div>
                         </div>
                         <div class="input-groups">
-                            <label>Upload image:</label>
-                            <div class="image-field"> <input type="file" name="" id="" placeholder="" id="image-field" > </div>
+                            <label>Mobile:</label>
+                            <div class="input-fields"> 
+                                <input type="text" name="" id="" placeholder="Enter mobile" class="text-field">
+                            </div>
                         </div>
-                        <button class="btn-signup" id="btnSignup"> <a href="#"> Sign Up</a></button>
+                        <button class="btn-signup" id="btnSignup"> <a href="#"> Create Account</a></button>
                         <span> Already have an account? click <a href="register.html" style="text-decoration: underline"> Sign in</a></span>
                     </div>
                          

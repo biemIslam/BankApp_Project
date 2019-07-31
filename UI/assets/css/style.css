@@ -80,7 +80,7 @@ footer{
 }
 label{
     /* border: 1px solid red; */
-    width: 100px;
+    width: 120px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -89,7 +89,7 @@ label{
     padding-top: 30px;
 
 }
-input.text-field{
+input.text-field,select,input[type="date"], input.countryState{
     width: 100%;
     border-radius: 10px;
     height: 30px;
@@ -98,7 +98,7 @@ input.text-field{
     margin-bottom: 20px;
     margin-left: 50px;
 }
-input[type="radio"]{
+input[type="radio"],input[type="checkbox"]{
     margin-left: 50px;
 }
 input[type="file"]{
@@ -107,6 +107,7 @@ input[type="file"]{
     font-size: 28px;
     margin-left: 55px;
 }
+
 .btn-submit, .btn-signup{
     background: rgb(67, 233, 117);
     border: 1px solid rgb(67, 233, 117);
