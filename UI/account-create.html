@@ -23,7 +23,7 @@
             </header>
             <main>
                 <form id="signup-form">
-                    <div>
+                    <div class="account-header">
                         <h2> Bank Account Form</h2>
                         <span>(Account Opening Form-Individual)</span>
                     </div>
@@ -152,7 +152,7 @@
                                 <input type="text" name="" id="" placeholder="Enter mobile" class="text-field">
                             </div>
                         </div>
-                        <button class="btn-signup" id="btnSignup"> <a href="#"> Create Account</a></button>
+                        <button class="btn-signup" id="btnSignup"> <a href="#"  class="btn-signin" onclick="return signinLink();"> Submit</a></button>
                         <span> Already have an account? click <a href="#" class="btn-signin" id="linkLogin" onclick="return signinLink();" style="text-decoration: underline"> Sign in</a></span>
                     </div>
                 </form>
@@ -191,19 +191,4 @@
             </div>
         </div>
     </body>
-    <script>
-        // let modal = document.getElementById('modal-login');
-        // let close = document.getElementById('close');
-
-        // document.getElementById('btnLogin').onclick = function () {
-        //     modal.style.display = "block"
-        // }
-    
-        // close.onclick = function(){
-        //     modal.style.display = "none";
-        // };
-        // function headerContent(){
-        //  document.getElementById('menu-bar').innerHTML = "<object type='text/html' data='assets/head/header.html'></object>"
-        // }
-    </script>
 </html>
