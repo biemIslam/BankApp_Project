@@ -6,27 +6,19 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bank App</title>
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-        <!-- <script src="custom.js"></script> -->
+        <script src="assets/js/custom.js"></script>
         <style>
             form#signup-form{
                 margin: 100px auto;
                 width: 50%;
+                border-style: none;
             }
         </style>
     </head>
-    <body onload="headerContent()">
+    <body onload="myFunction()">
         <div class="container">
             <header id="menu-bar">
-                <div id="bank-app"><a href="index.html">Bank App</a></div>
-                <nav>
-                    <ul>
-                        <li> <a href="/">Home</a></li>
-                        <li> <a href="#">About</a></li>
-                        <li> <a href="#">Our team</a></li>
-                        <li> <button class="btn-signin" id="btnLogin" onclick="">  Sign in </button> </li>
-                        <li> <a href="account-create.html">Create Bank account</a></li>
-                    </ul>
-                </nav>
+                <!-- load js file here -->
             </header>
             <main>
                 <form id="signup-form">
@@ -52,8 +44,12 @@
                             <label>Confirm Password:</label>
                             <div class="input-fields"> <input type="text" name="" id="" placeholder="confirm" class="text-field"> </div>
                         </div>
-                        <button class="btn-signup" id="btnSignup"> <a href="#"> Sign Up</a></button>
-                        <span> Already have an account? click <a href="register.html" style="text-decoration: underline"> Sign in</a></span> 
+                        <div class="input-groups">
+                            <label>Upload image:</label>
+                            <div class="image-field"> <input type="file" name="" id="" placeholder="" id="image-field" > </div>
+                        </div>
+                        <button class="btn-signup" id="btnSignup"> <a href="#" class="btn-signin" onclick="return signinLink();"> Submit </a></button>
+                        <span> Already have an account? click <a href="#" class="btn-signin" onclick="return signinLink();" style="text-decoration: underline"> Sign in</a></span> 
                     </fieldset>
                     <!-- <div class="input-groups">
                         <label>Email:</label>
@@ -76,6 +72,9 @@
                     <div id="forgot-password"> <a href="#"> Forgot password? </a> </div> -->
                 </form>
             </main>
+            <footer id="footer">
+                <p> Developed by Maryam &copy; 2019.</p>
+            </footer>
         </div>
 
         
@@ -100,7 +99,7 @@
                             <input type="radio" name="person" id="" value="user">User
                         </div>
                     </div>
-                    <button class="btn-submit" id="btnSub"> <a href="#"> Submit</a></button> 
+                    <button class="btn-submit" id="btnSub"> <a href="account-profile.html"> Submit</a></button> 
                     <span> No account yet? click <a href="signup.html"> Sign-up</a></span>
                     <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
                 </form>
@@ -108,16 +107,16 @@
         </div>
     </body>
     <script>
-        let modal = document.getElementById('modal-login');
-        let close = document.getElementById('close');
+        // let modal = document.getElementById('modal-login');
+        // let close = document.getElementById('close');
 
-        document.getElementById('btnLogin').onclick = function () {
-            modal.style.display = "block"
-        }
+        // document.getElementById('btnLogin').onclick = function () {
+        //     modal.style.display = "block"
+        // }
     
-        close.onclick = function(){
-            modal.style.display = "none";
-        };
+        // close.onclick = function(){
+        //     modal.style.display = "none";
+        // };
         // function headerContent(){
         //  document.getElementById('menu-bar').innerHTML = "<object type='text/html' data='assets/head/header.html'></object>"
         // }
