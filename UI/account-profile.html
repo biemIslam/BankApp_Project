@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bank App</title>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
+        <script src="assets/js/custom.js"></script>
+    </head>
+    <body onload="myFunction()">
+        
+        <div class="container"></div>
+            <header id="menu-bar">
+                 <!-- load js file here -->
+            </header>
+            <main id="signup-form">
+             
+                <div class="account-header">
+                    <h2>Dashboard</h2>
+                    <span> (Bank Account Profile)</span>
+                </div>
+                <div style="text-align: center"><h1>View all your account history here</h1></div>
+                <div class="account-div">
+                    <div id="col1">
+                        <div id="name"> <h2 style="display: inline-block">Welcome</h2> <span>MARYAM A.B, to your dashboard </span></div>
+                        <!-- <p><a href="account-create.html">Biodata</a></p> -->
+                        <p><a href="#" onclick="return myAccounts()">View my accounts</a></p>
+                        <p><a href="#" onclick="return transaction()">Transaction History</a></p>
+                        <p><a href="#">Transfers</a></p>
+                        <p><a href="#">Airtime & Data</a></p>
+                        <p><a href="index.html"><button id="logout">Logout</button></a></p>
+                    </div>
+                    
+                    <!-- list of accounts here -->
+                    <div id="col2" style="margin-top: 50px;">
+                        <!-- default display -->
+                        <div id="displayThis">
+                            <h2>Savings account</h2>
+                            <p>Account nos:0138400560</p>
+                            <p>Last transaction: Transfer of #3000 to so-and-so</p>
+                            <p>Date of Transaction: 01-Aug-2019</p>
+                            <p>Time of Transaction: 12-20-30pm</p>
+                        </div>
+                        <!-- end of default display -->
+                        
+                        <!--View my accounts account type -->
+                        <ul id="hideThis">
+                            <li>
+                                <h2>Savings account</h2>
+                                <p>Account name:Bello Maryam A</p>
+                                <p>Account nos:0138400560</p>
+                                <p>Current Balance: #100000000000</p>
+                            </li>
+                            <li>
+                                <h2>Current account</h2>
+                                <p>Account name:Bello Maryam A</p>
+                                <p>Account nos:0138400560</p>
+                                <p>Current Balance: #100000000000</p>
+                            </li>
+                        </ul>
+                        <!-- end of account type -->
+
+                        <!-- view transaction history -->
+                        <table id="table">
+                            <tr>
+                                <th>Date of Transaction</th>
+                                <th class="details">Transaction details</th>
+                                <th>Account</th>
+                            </tr>
+                            <tr>
+                                <td class="date">01 Jun 2019 </td>
+                                <td class="details"> <h3> Airtime Purchase  </h3>
+                                    <ul class="details-list"> 
+                                        <li> Channel: &nbsp;USSD </li>
+                                        <li> Amount: &nbsp;#100 </li>
+                                        <li> Time: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:05:45PM </li>
+                                    </ul>
+                                </td>
+                                <td class="account">Savings </td>
+                            </tr>
+                            <tr>
+                                <td class="date">26 Jul 2019 </td>
+                                <td class="details"> <h3> Transfer  </h3>
+                                    <ul class="details-list"> 
+                                        <li> Channel: &nbsp;USSD </li>
+                                        <li> Amount: &nbsp;#2000 </li>
+                                        <li> Time: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2:05:45PM </li>
+                                    </ul>
+                                </td>
+                                <td class="account">Savings </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </main>
+            <footer id="footer">
+                <p> Developed by Maryam &copy; 2019.</p>
+            </footer>
+        </div>
+
+     <!-- login modal -->
+        <div id="modal-login" class="modal">
+            <div id="modal-content">
+                <span id="close"> &times;</span>
+                <form>
+                    <div class="input-groups">
+                        <label>Email:</label>
+                        <div class="input-fields"> <input type="text" name="" id="" placeholder="you@domain.com" class="text-field"> </div>
+                    </div>
+                    <div class="input-groups">
+                        <label>Password:</label>
+                        <div class="input-fields"> <input type="text" name="" id="" placeholder="enter password.." class="text-field"> </div>
+                    </div>
+                    <div class="input-groups">
+                        <label>login as:</label>
+                        <div class="input-fields"> 
+                            <input type="radio" name="person" id="" value="admin" checked>Admin
+                            <input type="radio" name="person" id="" value="staff">Staff
+                            <input type="radio" name="person" id="" value="user">User
+                        </div>
+                    </div>
+                    <button class="btn-submit" id="btnSub"> <a href="account-profile.html"> Submit</a></button> 
+                    <span> No account yet?click<a href="signup.html"> Sign up</a></span>
+                    <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
+                </form>
+            </div>
+        </div>
+        <!-- end of login modal -->
+
+
+
+
+    </body>
+</html>
