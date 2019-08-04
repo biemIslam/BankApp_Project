@@ -6,50 +6,90 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bank App</title>
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-        <script src="assets/js/custom.js"></script>
     </head>
-    <body onload="staffFunction()">
+    <body>
         
         <div class="container">
             <header id="nav-bar">
                 <!-- load js file here -->
             </header>
             <main id="signup-form" style="border: none">
-                    <!-- <div style="text-align: center"><h1>Carry out user account transactions here</h1></div> -->
-                    <div class="staff-account-div">
-                        <div id="column1">
-                            <!-- <p><a href="account-create.html">Biodata</a></p> -->
-                            <p><a href="#" onclick="return bankAccounts()">View all accounts</a></p>
-                            <p><a href="#" onclick="return accountRecord()">Check account record</a></p>
-                            <p><a href="#">Credit Account</a></p>
-                            <p><a href="#">Debit Account</a></p>
-                            <p><a href="#">Delete Account</a></p>
-                            <p><a href="index.html"> <button id="logout">Logout</button></a></p>
-                        </div>
-                        
-                        <!-- list of accounts here -->
-                        <div id="column2">
-                                <div id="name" style="padding-top:30px"> 
-                                    <h2 style="display: inline-block">Welcome</h2> <span>Ruqayyah A.B, You are a staff</span>
-                                </div>
-                            <!-- default display -->
-                            <div id="displayThis">
-                                <h2>Savings account</h2>
-                                <p>Account nos:0138400560</p>
-                                <p>Last transaction: Transfer of #3000 to so-and-so</p>
-                                <p>Date of Transaction: 01-Aug-2019</p>
-                                <p>Time of Transaction: 12-20-30pm</p>
+                <!-- <div style="text-align: center"><h1>Carry out user account transactions here</h1></div> -->
+                <div class="staff-account-div">
+                    <div id="column1">
+                        <!-- <p><a href="account-create.html">Biodata</a></p> -->
+                        <p><a href="#" onclick="return bankAccounts()">View all accounts</a></p>
+                        <p><a href="#" onclick="return accountRecord()">Check account record</a></p>
+                        <p><a href="#">Credit Account</a></p>
+                        <p><a href="#">Debit Account</a></p>
+                        <p><a href="#">Delete Account</a></p>
+                        <p><a href="index.html"> <button id="logout">Logout</button></a></p>
+                    </div>
+                    
+                    <!-- list of accounts here -->
+                    <div id="column2">
+                            <div id="name" style="padding-top:30px"> 
+                                <h2 style="display: inline-block">Welcome</h2> <span>Ruqayyah A.B, You are a staff</span>
                             </div>
-                            <!-- end of default display -->
+                        <!-- default display -->
+                        <div id="displayThis">
+                            <h2>Savings account</h2>
+                            <p>Account nos:0138400560</p>
+                            <p>Last transaction: Transfer of #3000 to so-and-so</p>
+                            <p>Date of Transaction: 01-Aug-2019</p>
+                            <p>Time of Transaction: 12-20-30pm</p>
+                        </div>
+                        <!-- end of default display -->
+                        
+                        <!-- view list of all accounts -->
+                        <table id="table">
+                            <tr>
+                                <th>Account Type</th>
+                                <th class="details">Account details</th>
+                                <th>Account Creation Date</th>
+                            </tr>
+                            <tr>
+                                <td><h3>Savings</h3> </td>
+                                <td class="details">
+                                    <p>Account name:Bello Maryam A</p>
+                                    <p>Account nos:0138400560</p>
+                                    <p>Current Balance: #100000</p>
+                                </td>
+                                <td class="account">26 Jul 2019 </td>
+                            </tr>
+                            <tr>
+                                <td><h3>Savings</h3> </td>
+                                <td class="details">
+                                    <p>Account name:Bello Maryam A</p>
+                                    <p>Account nos:0138400560</p>
+                                    <p>Current Balance: #100000</p>
+                                </td>
+                                <td class="account">26 Sept 2018 </td>
+                            </tr>
+                        </table>
+
+                        <!-- list of accounts,click to show account record -->
+                        <div id="bank-record">
+                            <div id="recordLinks">
+                                <h3>Click below to check account record</h3>
+                                <p class="record"> <span>Savings:</span> 0023466236</p>
+                                <p class="record"> <span>Current:</span> 1124578935</p>
+                                <!-- <p> <a href="#" onclick="return row3()">Savings:</a> 1045234116</p>
+                                <p> <a href="#" onclick="return row4()">Current:</a> 0044332156</p> -->
+                                <!-- <p> <a href="#">Current:</a> 01063452267</p>
+                                <p> <a href="#">Savings:</a> 013840060</p>
+                                <p> <a href="#">Current:</a> 1002234578</p>
+                                <p> <a href="#">Savings:</a> 1156773452</p> -->
+                            </div>
                             
-                            <!-- view list of all accounts -->
-                            <table id="table">
+
+                            <table id="record-table" style="border:none;margin-left:10px;margin-top:50px">
                                 <tr>
                                     <th>Account Type</th>
                                     <th class="details">Account details</th>
                                     <th>Account Creation Date</th>
                                 </tr>
-                                <tr>
+                                <tr id="row1">
                                     <td><h3>Savings</h3> </td>
                                     <td class="details">
                                         <p>Account name:Bello Maryam A</p>
@@ -58,60 +98,19 @@
                                     </td>
                                     <td class="account">26 Jul 2019 </td>
                                 </tr>
-                                <tr>
-                                    <td><h3>Savings</h3> </td>
+                                <tr id="row2">
+                                    <td><h3>Current</h3> </td>
                                     <td class="details">
                                         <p>Account name:Bello Maryam A</p>
-                                        <p>Account nos:0138400560</p>
+                                        <p>Account nos:1124578935</p>
                                         <p>Current Balance: #100000</p>
                                     </td>
                                     <td class="account">26 Sept 2018 </td>
                                 </tr>
                             </table>
-
-                            <!-- list of accounts,click to show account record -->
-                            <div id="bank-record">
-                                <div id="recordLinks">
-                                    <h3>Click below to check account record</h3>
-                                    <p class="record"> <span>Savings:</span> 0023466236</p>
-                                    <p class="record"> <span>Savings:</span> 1124578935</p>
-                                    <!-- <p> <a href="#" onclick="return row3()">Savings:</a> 1045234116</p>
-                                    <p> <a href="#" onclick="return row4()">Current:</a> 0044332156</p> -->
-                                    <!-- <p> <a href="#">Current:</a> 01063452267</p>
-                                    <p> <a href="#">Savings:</a> 013840060</p>
-                                    <p> <a href="#">Current:</a> 1002234578</p>
-                                    <p> <a href="#">Savings:</a> 1156773452</p> -->
-                                </div>
-                                
-
-                                <table id="record-table" style="border:none;margin-left:10px;margin-top:50px">
-                                    <tr>
-                                        <th>Account Type</th>
-                                        <th class="details">Account details</th>
-                                        <th>Account Creation Date</th>
-                                    </tr>
-                                    <tr id="row1">
-                                        <td><h3>Savings</h3> </td>
-                                        <td class="details">
-                                            <p>Account name:Bello Maryam A</p>
-                                            <p>Account nos:0138400560</p>
-                                            <p>Current Balance: #100000</p>
-                                        </td>
-                                        <td class="account">26 Jul 2019 </td>
-                                    </tr>
-                                    <tr id="row2">
-                                        <td><h3>Savings</h3> </td>
-                                        <td class="details">
-                                            <p>Account name:Bello Maryam A</p>
-                                            <p>Account nos:0138400560</p>
-                                            <p>Current Balance: #100000</p>
-                                        </td>
-                                        <td class="account">26 Sept 2018 </td>
-                                    </tr>
-                                </table>
-                            </div>
                         </div>
                     </div>
+                </div>
             </main>
             <footer id="footer">
                 <p> Developed by Maryam &copy; 2019.</p>
@@ -147,4 +146,6 @@
         </div>
         <!-- end of login modal -->
     </body>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/staff.js"></script>
 </html>
