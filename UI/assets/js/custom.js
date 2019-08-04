@@ -67,34 +67,7 @@ function bankAccounts(){
     document.querySelector('#bank-record').style.display = 'none';
     return false;
 }
-function accountRecord(){
-    document.querySelector('#table').style.display = "none";
-    document.querySelector('#displayThis').style.display = 'none';
-    document.querySelector('#bank-record').style.display = 'block';
-    return false;
-}
 
-
-document.querySelectorAll('.record').addEventListener('click',recordLink);
-function recordLink(){
-    // let queryDiv = document.getElementById('recordLink').querySelectorAll('p');
-    alert('fghj');
-    // for(let i = 0; i < queryDiv.length; i++){
-    //     if(queryDiv[i].addEventListener('click',loopRecord)){
-
-    //     }
-    // }
-
-    // function loopRecord(){
-    //     document.querySelector('#record-table').style.display = "block";
-    //     document.querySelector('#displayThis').style.display = 'none';
-    //     document.querySelector('#row2').style.display = 'none';
-    //     document.querySelector('#bank-record').style.display = 'flex';
-    // }
-   
-    // return false;
-}
-// recordLink();
 
     
     

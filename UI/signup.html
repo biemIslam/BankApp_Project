@@ -45,31 +45,20 @@
                             <div class="input-fields"> <input type="text" name="" id="" placeholder="confirm" class="text-field"> </div>
                         </div>
                         <div class="input-groups">
+                            <label>Register as:</label>
+                            <div class="input-fields"> 
+                                <input type="radio" name="person" id="" value="admin" checked>Admin
+                                <input type="radio" name="person" id="" value="staff">Staff
+                                <input type="radio" name="person" id="" value="user">User
+                            </div>
+                        </div>
+                        <div class="input-groups">
                             <label>Upload image:</label>
                             <div class="image-field"> <input type="file" name="" id="" placeholder="" id="image-field" > </div>
                         </div>
                         <button class="btn-signup" id="btnSignup"> <a href="#" class="btn-signin" onclick="return signinLink();"> Submit </a></button>
                         <span> Already have an account? click <a href="#" class="btn-signin" onclick="return signinLink();" style="text-decoration: underline"> Sign in</a></span> 
                     </fieldset>
-                    <!-- <div class="input-groups">
-                        <label>Email:</label>
-                        <div class="input-fields"> <input type="text" name="" id="" placeholder="you@domain.com" class="text-field"> </div>
-                    </div>
-                    <div class="input-groups">
-                        <label>Password:</label>
-                        <div class="input-fields"> <input type="text" name="" id="" placeholder="enter password.." class="text-field"> </div>
-                    </div>
-                    <div class="input-groups">
-                        <label>login as:</label>
-                        <div class="input-fields"> 
-                            <input type="radio" name="person" id="" value="admin" checked>Admin
-                            <input type="radio" name="person" id="" value="staff">Staff
-                            <input type="radio" name="person" id="" value="user">User
-                        </div>
-                    </div>
-                    <button class="btn-submit" id="btnSub"> <a href="#"> Submit</a></button> 
-                    <span> No account yet?<a href="register.html"> Register</a></span>
-                    <div id="forgot-password"> <a href="#"> Forgot password? </a> </div> -->
                 </form>
             </main>
             <footer id="footer">
@@ -106,19 +95,4 @@
             </div>
         </div>
     </body>
-    <script>
-        // let modal = document.getElementById('modal-login');
-        // let close = document.getElementById('close');
-
-        // document.getElementById('btnLogin').onclick = function () {
-        //     modal.style.display = "block"
-        // }
-    
-        // close.onclick = function(){
-        //     modal.style.display = "none";
-        // };
-        // function headerContent(){
-        //  document.getElementById('menu-bar').innerHTML = "<object type='text/html' data='assets/head/header.html'></object>"
-        // }
-    </script>
 </html>
