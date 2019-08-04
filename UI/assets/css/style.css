@@ -263,3 +263,48 @@ div.account-header h2{
     color: white;
     font-size: 19px
 }
+
+/* staff page */
+#nav-bar div h2{
+    margin-top:-10px;
+    padding-right: 150px;
+    color: white;
+    margin-right: 250px;
+}
+ .staff-account-div{
+    display: flex;
+    margin-top: -45px;
+    height: 500px;
+    /* padding-left:30px; */
+    /* border: 1px solid red; */
+    margin-left: -150px;
+    margin-bottom: -100px
+}
+#bank-record p span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#column1 p a{
+    color: rgba(234, 235, 241, 0.945);
+    text-decoration: none;
+    line-height: 2em
+}
+#column1{
+    padding: 50px;
+    width: 15%;
+    background: rgb(78, 77, 77);
+}
+#column2{
+    width: 85%;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    /* border: 1px solid red; */
+}
+#bank-record{
+   display: none;
+   margin-top: -30px;
+}
+#record-table td{
+   padding: 10px
+}
