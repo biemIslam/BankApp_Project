@@ -247,16 +247,13 @@ ul.details-list{
 .account-header{
     background: rgb(78, 77, 77);
     color: white;border-radius: 10px; 
-    border: 1px solid rgb(78, 77, 77)
+    border: 1px solid rgb(78, 77, 77);
+    font-size: 20px;
 }
 div.account-header h2{
     font-weight: 600;
     display: inline-block
 }
-div.account-header{
-    font-size: 20px;
-}
-
 #logout{
     background: rgb(220, 53, 69);
     border: 1px solid rgb(220, 53, 69);
