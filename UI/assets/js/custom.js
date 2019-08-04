@@ -60,13 +60,6 @@ function transaction(){
 }
 // user task function
 
-// staff tasks function
-function bankAccounts(){
-    document.querySelector('#table').style.display = "block";
-    document.querySelector('#displayThis').style.display = 'none';
-    document.querySelector('#bank-record').style.display = 'none';
-    return false;
-}
 
 
     
