@@ -6,35 +6,27 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Bank App</title>
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-        <!-- <script src="custom.js"></script> -->
+        <script src="assets/js/custom.js"></script>
+    <!-- <script src="assets/js/staff.js"></script> -->
         <style>
             form#signup-form{
-                margin: 200px auto;
+                margin: 100px auto;
                 width: 50%;
                 border-radius: 10px; 
                 border: 1px solid rgb(78, 77, 77);
             }
         </style>
     </head>
-    <body onload="headerContent()">
+    <body>
         <div class="container">
             <header id="menu-bar">
-                <div id="bank-app"><a href="index.html">Bank App</a></div>
-                <nav>
-                    <ul>
-                        <li> <a href="/">Home</a></li>
-                        <li> <a href="#">About</a></li>
-                        <li> <a href="#">Our team</a></li>
-                        <li> <button class="btn-signin" id="btnLogin" onclick="">  Sign in </button> </li>
-                        <li> <a href="account-create.html">Create Bank account</a></li>
-                    </ul>
-                </nav>
+                 <!-- load js file here -->
             </header>
             <main>
                 <form id="signup-form">
-                    <div style="background: rgb(78, 77, 77);color: white;border-radius: 10px; border: 1px solid rgb(78, 77, 77)">
-                        <h2 style="font-weight: 600;display: inline-block"> Bank Account Form</h2>
-                        <span style="font-size: 20px">(Account Opening Form-Individual)</span>
+                    <div class="account-header">
+                        <h2> Bank Account Form</h2>
+                        <span>(Account Opening Form-Individual)</span>
                     </div>
                     <div  id="form-content" style="padding-left:30px;">
                         <div class="input-groups">
@@ -161,57 +153,21 @@
                                 <input type="text" name="" id="" placeholder="Enter mobile" class="text-field">
                             </div>
                         </div>
-                        <button class="btn-signup" id="btnSignup"> <a href="#"> Create Account</a></button>
-                        <span> Already have an account? click <a href="register.html" style="text-decoration: underline"> Sign in</a></span>
+                        <button class="btn-signup" id="btnSignup"> <a href="#"  class="btn-signin" onclick="return signinLink();"> Submit</a></button>
+                        <span> Already have an account? click <a href="#" class="btn-signin" id="linkLogin" onclick="return signinLink();" style="text-decoration: underline"> Sign in</a></span>
                     </div>
-                         
-                    
                 </form>
             </main>
+            <footer id="footer">
+                <p> Developed by Maryam &copy; 2019.</p>
+            </footer>
         </div>
 
         
-        <!-- login modal -->
-        <div id="modal-login" class="modal">
-            <div id="modal-content">
-                <span id="close"> &times;</span>
-                <form>
-                    <div class="input-groups">
-                        <label>Email:</label>
-                        <div class="input-fields"> <input type="text" name="" id="" placeholder="you@domain.com" class="text-field"> </div>
-                    </div>
-                    <div class="input-groups">
-                        <label>Password:</label>
-                        <div class="input-fields"> <input type="text" name="" id="" placeholder="enter password.." class="text-field"> </div>
-                    </div>
-                    <div class="input-groups">
-                        <label>login as:</label>
-                        <div class="input-fields"> 
-                            <input type="radio" name="person" id="" value="admin" checked>Admin
-                            <input type="radio" name="person" id="" value="staff">Staff
-                            <input type="radio" name="person" id="" value="user">User
-                        </div>
-                    </div>
-                    <button class="btn-submit" id="btnSub"> <a href="#"> Submit</a></button> 
-                    <span> No account yet? click <a href="signup.html"> Sign-up</a></span>
-                    <div id="forgot-password"> <a href="#"> Forgot password? </a> </div>
-                </form>
-            </div>
+        <div id="modal-div">
+           
         </div>
+        <!-- end of login modal -->
     </body>
-    <script>
-        let modal = document.getElementById('modal-login');
-        let close = document.getElementById('close');
-
-        document.getElementById('btnLogin').onclick = function () {
-            modal.style.display = "block"
-        }
     
-        close.onclick = function(){
-            modal.style.display = "none";
-        };
-        // function headerContent(){
-        //  document.getElementById('menu-bar').innerHTML = "<object type='text/html' data='assets/head/header.html'></object>"
-        // }
-    </script>
 </html>
