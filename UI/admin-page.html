@@ -18,19 +18,19 @@
                 <div class="staff-account-div">
                     <div id="column1">
                         <!-- <p><a href="account-create.html">Biodata</a></p> -->
-                        <p><a href="#" onclick="return bankAccounts()">View all accounts</a></p>
-                        <p><a href="#" onclick="return accountRecord()">Check account record</a></p>
-                        <p><a href="#" onclick="return creditAccounts()">Credit Account</a></p>
-                        <p><a href="#" onclick="return debitAccounts()">Debit Account</a></p>
+                        <p><a href="#" onclick="return adminOne()">Activate/Deactivate Accounts</a></p>
+                        <p><a href="signup.html" >Create admin/staff account</a></p>
+                        <p><a href="#" onclick="return adminViewAccounts()">View all accounts</a></p>
+                        <p><a href="#" onclick="return adminCheckRecord()">Check account record</a></p>
                         <p><a href="#" onclick="return deleteAccount()">Delete Account</a></p>
                         <p><a href="index.html"> <button id="logout">Logout</button></a></p>
                     </div>
                     
                     <!-- list of accounts here -->
                     <div id="column2">
-                            <div id="name" style="padding-top:30px"> 
-                                <h2 style="display: inline-block">Welcome</h2> <span>Ruqayyah A.B, You are a staff</span>
-                            </div>
+                        <div id="name" style="padding-top:30px"> 
+                            <h2 style="display: inline-block">Welcome</h2> <span>Nasir B.B, You are an admin</span>
+                        </div>
                         <!-- default display -->
                         <div id="displayThis">
                             <h2>Savings account</h2>
@@ -68,10 +68,43 @@
                             </tr>
                         </table>
 
+                        <!-- activate/deactivate accounts -->
+                        <table id="active-not">
+                            <tr>
+                                <!-- <th>Account Type</th> -->
+                                <th class="details">Account details</th>
+                                <th>Activate/Deactivate</th>
+                            </tr>
+                            <tr>
+                                <td class="details">
+                                    <p>Account name:Bello Maryam A</p>
+                                    <p>Account nos:0138400560</p>
+                                    <p>Current Balance: #100000</p>
+                                    <p> Type : Savings</p>
+                                </td>
+                                <td class="accountSwitch">
+                                    <button class="btn-activate" id="active">Activate</button>
+                                    <button class="btn-deactivate">Deactivate</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="details">
+                                    <p>Account name:Bello Maryam A</p>
+                                    <p>Account nos:0138400560</p>
+                                    <p>Current Balance: #250000</p>
+                                    <p> Type : Savings</p>
+                                </td>
+                                <td class="accountSwitch">
+                                    <button class="btn-activate">Activate</button>
+                                    <button class="btn-deactivate">Deactivate</button>
+                                </td>
+                            </tr>
+                        </table>
+
                         <!-- list of accounts,click to show account record -->
                         <div id="bank-record">
+                            <h3>Click below to check account record</h3>
                             <div id="recordLinks">
-                                <h3>Click below to check account record</h3>
                                 <p class="record"> <span> Savings: </span> 0023466236</p>
                                 <p class="record"> <span> Current: </span> 1124578935</p>
                                 <p class="record"> <span> Savings: </span> 1045234116</p>
@@ -84,12 +117,12 @@
                             
 
                             <table id="record-table" style="border:none;margin-left:10px;margin-top:50px">
-                                <tr>
+                                <tr id="row1">
                                     <th>Account Type</th>
                                     <th class="details">Account details</th>
                                     <th>Account Creation Date</th>
                                 </tr>
-                                <tr id="row1">
+                                <tr id="row2">
                                     <td><h3>Savings</h3> </td>
                                     <td class="details">
                                         <p>Account name:Bello Maryam A</p>
@@ -98,7 +131,7 @@
                                     </td>
                                     <td class="account">26 Jul 2019 </td>
                                 </tr>
-                                <tr id="row2">
+                                <tr id="row3">
                                     <td><h3>Current</h3> </td>
                                     <td class="details">
                                         <p>Account name:Bello Maryam A</p>
@@ -107,8 +140,27 @@
                                     </td>
                                     <td class="account">26 Sept 2018 </td>
                                 </tr>
+                                <!-- <tr id="row4">
+                                    <td><h3>Current</h3> </td>
+                                    <td class="details">
+                                        <p>Account name:Bello Maryam A</p>
+                                        <p>Account nos:1124578935</p>
+                                        <p>Current Balance: #100000</p>
+                                    </td>
+                                    <td class="account">26 Sept 2018 </td>
+                                </tr>
+                                <tr id="row5">
+                                    <td><h3>Current</h3> </td>
+                                    <td class="details">
+                                        <p>Account name:Bello Maryam A</p>
+                                        <p>Account nos:1124578935</p>
+                                        <p>Current Balance: #100000</p>
+                                    </td>
+                                    <td class="account">26 Sept 2018 </td>
+                                </tr> -->
                             </table>
                         </div>
+
 
                         <!-- delete account here -->
                         <div id="delete-account">
@@ -123,26 +175,6 @@
                                 <p class="delete"> <span> <input type="checkbox" name="check" id=""></span> Current: 1002234578</p>
                                 <p class="delete"> <span> <input type="checkbox" name="check" id=""></span> Savings: 1156773452</p>
                             </div>
-                        </div>
-
-                        <!-- credit account -->
-                        <div id="credit-acct">
-                            <p class="record" style="line-height: 2em"> <span> <strong>Savings:</strong> </span> &nbsp;&nbsp; 0023466236 <br>
-                                <span> <strong> Acccount name:  </strong> </span> &nbsp;&nbsp; Mr Yovoyon Victor <br>
-                                <span> <strong> Current Balance: </strong> </span> &nbsp;&nbsp; #10,530 <br>
-                                <span> <strong> Enter Amount </strong> </span> &nbsp;&nbsp;  #<input type="number" name="amt" id="amt"> <br>
-                                <button class="btn-activate" id="active">Deposit</button>
-                            </p>
-                        </div>
-
-                        <!-- debit account -->
-                        <div id="debit-acct">
-                            <p class="record" style="line-height: 2em"> <span> <strong>Savings:</strong> </span> &nbsp;&nbsp; 0023466236 <br>
-                                <span> <strong> Acccount name:  </strong> </span> &nbsp;&nbsp; Mr Yovoyon Victor <br>
-                                <span> <strong> Current Balance: </strong> </span> &nbsp;&nbsp; #10,530 <br>
-                                <span> <strong> Enter Amount </strong> </span> &nbsp;&nbsp;  #<input type="number" name="amt" id="amt"> <br>
-                                <button class="btn-activate" id="active">Withdraw</button>
-                            </p>
                         </div>
                     </div>
                 </div>
