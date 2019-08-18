@@ -1,17 +1,17 @@
 window.onload = function ()
 {
     
-    if(window.location.href == 'http://127.0.0.1:5500/UI/staff-page.html'){
+    if(window.location.href == 'https://biemislam.github.io/Banka_Project_Andela/UI/staff-page.html'){
         document.querySelector('#nav-bar').innerHTML = '<div id="bank-app"><a href="index.html">Bank App</a></div>' + 
         '<div> <h2 href="index.html">Staff Page</h2></div>';
         document.querySelector('#modal-div').style.display = 'none';
     }
-    else if (window.location.href == 'http://127.0.0.1:5500/UI/account-profile.html') {
+    else if (window.location.href == 'https://biemislam.github.io/Banka_Project_Andela/UI/account-profile.html') {
         document.querySelector('#nav-bar').innerHTML = '<div id="bank-app"><a href="index.html">Bank App</a></div>' + 
         '<div> <h2 href="index.html">My Account History</h2></div>';
         document.querySelector('#modal-div').style.display = 'none';
     }
-    else if (window.location.href == 'http://127.0.0.1:5500/UI/admin-page.html') {
+    else if (window.location.href == 'https://biemislam.github.io/Banka_Project_Andela/UI/admin-page.html') {
         document.querySelector('#nav-bar').innerHTML = '<div id="bank-app"><a href="index.html">Bank App</a></div>' + 
         '<div> <h2 href="index.html">Admin</h2></div>';
         document.querySelector('#modal-div').style.display = 'none';
